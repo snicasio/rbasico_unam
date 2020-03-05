@@ -1,2 +1,16 @@
-# rbasico_unam
-Este repositorio contiene las clases y ejercicios del curso "Programación Básica en R", impartido por el departamento de educación continua de la ENES-UNAM, campus Morelia.
+# Introducción
+Esta sección contiene los códigos de las clases y ejercicios de la primera unidad del curso "Programación Básica en R":
+
+- Estructura básica de datos
+    + Objetos
+    + Operadores
+- Estructuras avanzadas de datos
+    + Arreglos
+    + Vectores
+    + Matrices/tablas
+    + Listas
+- Gráficas
+    + Histogramas
+    + Boxplots/barplots
+    + Graficas de dispersión
+    + Exportación de gráficos
