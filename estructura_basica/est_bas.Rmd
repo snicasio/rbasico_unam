@@ -17,13 +17,15 @@ R tiene un espacio de trabajo conocido como el ambiente global o *global environ
 
 El objeto más sencillo e importante en R son los **vectores**, los cuáles almacenan una cadena de información. Existen dos tipos de vectores, los **atómicos** que solo permiten información de un mismo tipo y las **listas**, que pueden incluir distintos tipos de información.
 
-### Atómicos
+### Vectores atómicos
+
+
 
 #### Dimensiones
 
 #### Clases
 
-### Listas
+### Vectores listas
 
 #### Arreglos
 
