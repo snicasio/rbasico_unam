@@ -2,20 +2,34 @@
 Esta sección contiene los códigos de las clases y ejercicios de la primera unidad del curso "Programación Básica en R":
 
 - Estructura básica de datos
+    + Operadores
+            * Lógicos
+            * Matemáticos
     + Vectores
         * Atómicos
+            ~ Tipos
+                # Caracter
+                # Lógico
+                # Numérico (discreto)
+                # Numérico (contínuo)
             ~ Dimensiones
-            ~ Clases
+                # Cadena
+                # Matriz
+                # Arreglo
         * Listas
             ~ Arreglos
             ~ Matrices
-        * Tablas y tibbles
-    + Operadores
-        * Lógicos
-        * Matemáticos
 - Estructuras avanzadas de datos
     + Clases
         * S3
+            ~ Atómicos
+                # Factores
+                # Fechas
+                # Fecha-hora
+                # Duraciones
+            ~ Listas
+                # Tablas
+                # Tibbles
         * S4
         * Reference
         * R6
