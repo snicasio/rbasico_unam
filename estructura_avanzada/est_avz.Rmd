@@ -45,6 +45,7 @@ Existen asignaciones de clase S3 para vectores atómicos que modifican la inform
 * **Fecha-hora:** Registros de fecha con resolución de segundos. Se almacenan en vectores `POSIXvc`.
 * **Duraciones:** Registros de tiempo. Se almacenan en vectores `difftime`.
 
+<<<<<<< HEAD
 <center>
 ![Vectores S3](atomic_s3.png)
 </center>
@@ -210,6 +211,8 @@ Además, una tabla tiene:
 * `colnames()`/`names()` (nombre de columnas)
 * `nrow()` (número de filas)
 * `ncol()`/`length()` (número de columnas)
+
+Las tablas son de los objetos más comunes en R para el análisis de datos y consiste en una lista de vectores con atributos `names` (para columnas) y `row.names` (para filas) y la clase `data.frame`. A diferencia de las listas, la longitud de los vectores del `data.frame` debe ser la misma, resultando en una estructura rectangular que comparte las propiedades de las matrices y las listas. Además, una tabla tiene `rownames()` (nombre de filas), `colnames()`/`names()` (nombre de columnas), `nrow()` (número de filas) y `ncol()`/`length()` (número de columnas).
 
 ```{r,collapse=TRUE,prompt=TRUE}
 df1 <- data.frame(x = 1:3, y = letters[1:3])
