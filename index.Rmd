@@ -1,0 +1,114 @@
+---
+title: "Página inicial"
+author: "Sergio Nicasio-Arzeta"
+date: "10/3/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Inicio
+
+Bienvenidos al curso "Programación básica en R" en la Escuela Nacional de Estudios Superiores, unidad Morelia. A lo largo de este curso conocerán el ambiente de R, así como los fundamentos básicos de análisis y programación.
+
+## Requisitos
+
+Este curso está dirigido a todo el público. Es necesario que tengan nociones básicas de estadística. En este curso abordaremos problemáticas que van desde temas administrativos y de contabilidad, hasta biológicos y de manejo de recursos naturales. El objetivo es que el participante conozca el potencial que tiene R en diversas disciplinas.
+
+## Acerca del profesor
+
+Soy el C. a Dr. Sergio Nicasio Arzeta. Nací en 1985 en la Ciudad de México. Estudié en la Facultad de Ciencias de la UNAM, donde me titulé de Biólogo en el año 2010. Durante ese año, trabajó como auxiliar de proyectos en la asociación civil Natura y Ecosistemas Mexicanos A.C., trabajo que lo motivó a estudiar los efectos de la perturbación humana en los bosques tropicales húmedos. En el año 2011 inicié mis estudios de doctorado en el Instituto de Investigaciones en Ecosistemas y Sustentabilidad (IIES) de la UNAM, ubicado en la ciudad de Morelia, Michoacán. Desde entonces, comencé a emplear diversos sistemas de información geográfica y herramientas de percepción remota para el desarrrollo de mi tesis. También me especialicé tanto en el dominio y aplicación de una amplia variedad de análisis y modelos estadísticos (estadística univariada y multivariada, modelos de probabilidad y distribución espacial, análisis geoespaciales), como en la programación básica (Pyhton y SQL) y avanzada (R).
+
+## Temario
+
+1. Introducción a R
+    + Historia
+    + Interfaz
+    + Operadores
+        + Lógicos
+        + Matemáticos
+    + [Estructura básica de datos](est_bas.html)
+        + Vectores
+        + Listas
+    + [Estructura avanzada de datos](est_avz.html)
+        + Vectores S3
+        + Listas S3
+    + Gráficas
+2. Estadística
+    + Estadistica descriptiva
+        + Medidas
+            + Tendencia central
+                + Media
+                + Mediana
+                + Moda
+            + Posición
+                + Límites
+                + Cuartiles
+            + Dispersión
+                + Varianza
+                + Desviación estándar
+                + Coeficiente de variación
+        + Gráficas
+            + Histograma
+            + Boxplot
+            + Barplot
+            + Scatterplot
+    + Estadística inferencial
+        + Distribuciones de probabilidad
+            + Binomial
+            + Poisson
+            + Normal
+        + Estimadores
+            + Error estándar
+            + Intervalos de confianza
+            + Tamaño de muestra
+                + Con remuestreo
+                + Sin remuestreo
+        + Pruebas de hipótesis
+            + Una media/proporción
+            + Dos medias/proporciones
+            + Análisis de varianza (ANOVA)
+                + Una vía
+                + Dos vías
+                + Anidado
+                + Medidas repetidas
+            + Correlación
+                + Pearson
+                + Spearman
+            + Regresión lineal
+                + Regresión simple
+                + Regresión múltiple
+                    + Variables independientes
+                    + Interacción de variables
+                + Análisis de covarianza (ANCOVA)
+3. Programación en R
+    + Principios básicos
+        + Iteraciones
+            + for
+            + while
+            + repeat
+        + Funciones básicas
+            + function
+            + if
+            + else
+        + Funciones avanzadas
+            + apply
+            + sapply
+            + lapply
+            + tapply
+    + Aplicaciones
+        + Elaboración de algoritmos
+        + Optimización
+            + Código
+            + Paralelización
+        + Bases de datos
+            + Fundamentos básicos de SQL
+    + Paquetes
+        + Elaboración de un paquete R
+    + Proyectos
+        + Individual
+        + Grupales
+        + Reporte web
+        + Reporte pdf
