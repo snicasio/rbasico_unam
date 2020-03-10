@@ -21,7 +21,6 @@ digraph boxes_and_circles {
 dgrm_list
 
 
-
 atomic_s3 <- grViz("
 digraph boxes_and_circles {
 
@@ -33,7 +32,7 @@ digraph boxes_and_circles {
         width = 1,
         height = 1,
         fontname = Helvetica]
-  Atomico
+        Atomico
 
   node [shape = circle,
         fixedsize = true,
