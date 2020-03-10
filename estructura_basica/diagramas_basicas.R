@@ -19,7 +19,6 @@ digraph boxes_and_circles {
 dgrm_vector
 
 
-
 dgrm_atomic <- grViz("
 digraph boxes_and_circles {
 
@@ -28,13 +27,14 @@ digraph boxes_and_circles {
 
   # several 'node' statements
   node [shape = box,
-        width = 0.1,
+        width = 1,
+        height = 1,
         fontname = Helvetica]
   Atomico
 
   node [shape = circle,
         fixedsize = true,
-        width = 0.8] // sets as circles
+        width = 1] // sets as circles
   numeric; integer; double; logical; character
 
   # several 'edge' statements
