@@ -1,6 +1,6 @@
 library(DiagrammeR)
 
-dgrm_vector <- grViz("
+dgrm_list <- grViz("
 digraph boxes_and_circles {
 
   # a 'graph' statement
@@ -9,18 +9,20 @@ digraph boxes_and_circles {
   # several 'node' statements
   node [shape = box,
         width = 1,
+        height = 1,
         fontname = Helvetica]
-  Vector; Atomico; Lista
+  dataframe; tibble; Lista
 
   # several 'edge' statements
-  Vector->Atomico Vector->Lista
+  Lista->dataframe
+  Lista->tibble
 }
 ")
-dgrm_vector
+dgrm_list
 
 
 
-dgrm_atomic <- grViz("
+atomic_s3 <- grViz("
 digraph boxes_and_circles {
 
   # a 'graph' statement
@@ -28,18 +30,32 @@ digraph boxes_and_circles {
 
   # several 'node' statements
   node [shape = box,
-        width = 0.1,
+        width = 1,
+        height = 1,
         fontname = Helvetica]
   Atomico
 
   node [shape = circle,
         fixedsize = true,
-        width = 0.8] // sets as circles
+        width = 1] // sets as circles
   numeric; integer; double; logical; character
+  
+  node [shape = triangle,
+        fixedsize = true,
+        width = 1.5,
+        height = 1.5] // sets as circles
+  factor; POSIXct; Date; difftime
 
   # several 'edge' statements
   Atomico->numeric Atomico->logical Atomico->character
   numeric->integer numeric->double
+  factor->integer [label = 'S3', fontname = Helvetica]
+  POSIXct->double [label = 'S3', fontname = Helvetica]
+  Date->double [label = 'S3', fontname = Helvetica]
+  difftime->double [label = 'S3', fontname = Helvetica]
+  
+  # add a graph statement
+  graph [nodesep = 0.2]
 }
 ")
-dgrm_atomic
+atomic_s3

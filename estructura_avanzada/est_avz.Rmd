@@ -45,6 +45,10 @@ Existen asignaciones de clase S3 para vectores atómicos que modifican la inform
 * **Fecha-hora:** Registros de fecha con resolución de segundos. Se almacenan en vectores `POSIXvc`.
 * **Duraciones:** Registros de tiempo. Se almacenan en vectores `difftime`.
 
+<center>
+![Vectores S3](atomic_s3.png)
+</center>
+
 ##### Factores
 
 Los factores son vectores que contienen valores predefinidos y se usan para almacenar información categórica. Los factores se construyen sobre un vector numérico discreto (integer) y presenta dos atributos: una clase *factor* que lo diferencía de otros vectores discretos y los *niveles*, que definen el grupo de valores permitidos. Para generar un factor, se emplea el comando `factor()`:
@@ -191,6 +195,10 @@ attributes(duracion)
 #### Vectores lista S3
 
 Los dos principales objetos S3 que se elaboran a partir de listas son las tablas (`data.frame`) y los tibbles.
+
+<center>
+![Lista S3](lista.png)
+</center>
 
 ##### Tablas
 
