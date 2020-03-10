@@ -1,0 +1,28 @@
+---
+title: "Acerca de mi"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+<div class = "col2">
+Soy el C. a Dr. Sergio Nicasio Arzeta. Nací en 1985 en la Ciudad de México. Estudié en la Facultad de Ciencias de la UNAM, donde me titulé de Biólogo en el año 2010. Durante ese año, trabajó como auxiliar de proyectos en la asociación civil Natura y Ecosistemas Mexicanos A.C., trabajo que lo motivó a estudiar los efectos de la perturbación humana en los bosques tropicales húmedos. En el año 2011 inicié mis estudios de doctorado en el Instituto de Investigaciones en Ecosistemas y Sustentabilidad (IIES) de la UNAM, ubicado en la ciudad de Morelia, Michoacán.
+
+Fue entonces cuando comencé a emplear diversos sistemas de información geográfica y herramientas de percepción remota para el desarrrollo de mi tesis. También me especialicé tanto en el dominio y aplicación de una amplia variedad de análisis y modelos estadísticos (estadística univariada y multivariada, modelos de probabilidad y distribución espacial, análisis geoespaciales), como en la programación básica (Pyhton y SQL) y avanzada (R).
+</div>
+![](yo.jpg)
