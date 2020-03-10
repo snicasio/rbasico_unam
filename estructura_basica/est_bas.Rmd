@@ -165,7 +165,7 @@ attributes(a[c(1,3)])   #   Se pierde el atributo
 attributes(a*2) #   Sin cambios
 ```
 
-Para preservarlos, es necesario crear sus propias clases S3 (lo veremos en la sección *estructuras avanzadas*). Los únicos atributos que se preservan después de una operación son los nombres (`names`) y las dimensiones (`dim`).
+Para preservarlos, es necesario crear sus propias clases S3 (lo veremos en la sección *estructuras avanzadas*). Los únicos atributos que se preservan después de una operación son los nombres (`names()`) y las dimensiones (`dim()`).
 
 ##### Nombres
 
