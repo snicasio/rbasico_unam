@@ -17,13 +17,44 @@ FAO_tb <- read_csv("FAO.csv")   #   tibble
 FAO_df
 str(FAO_df)
 head(FAO_df)
+
+#Objeto nivel
 FAO_df$Area
 levels(FAO_df$Area)
 typeof(FAO_df$Area)
 aggregate(FAO_df$Value, list(FAO_df$Area),mean)
+FAO_df$Element
+levels(FAO_df$Element)
+aggregate(FAO_df$Value, list(FAO_df$Area,FAO_df$Element),mean)
+aggregate(FAO_df$Value, list(FAO_df$Element),mean)
+
+FAO_df[FAO_df$Area=="Mexico" & FAO_df$Year == 2016,]
+#Operador AND
+
+FAO_df[FAO_df$Area=="Mexico" | FAO_df$Year == 2016,]
+#Operador OR
+
+#Objeto fecha hora
+attributes(Sys.time())
+typeof(Sys.time())
+unclass(Sys.time())
+
+#Objeto fecha
+fecha_nac <- as.Date("1985-10-08");fecha_nac
+attributes(fecha_nac)
+typeof(fecha_nac)
+unclass(fecha_nac)
+#unclass refiere todo con relacion a 1970 lanzamiento linux
 
 
-
+#Coercion
+fechas <- FAO_df$Year
+fechas <- unique(fechas)
+fechas 
+obj_fechas <- as.character(fechas)
+paste0(obj_fechas," 01-01")
+#FAO_df$Year <- paste0(as.character(FAO_df$Year)," 01-01") trabaja sobre el vector
+#Modifica los datos originales 
 
 
 #Ejemplo lista
