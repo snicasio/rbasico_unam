@@ -2,7 +2,13 @@
 title: "Introducción: Estructura básica"
 author: "C. a Dr. Sergio Nicasio-Arzeta"
 date: "10/3/2020"
-output: html_document
+output:
+    html_document:
+        df_print: paged
+        toc: true
+        toc_depth: 6
+        toc_float: true
+        number_sections: true
 ---
 
 ```{r setup, include=FALSE}
