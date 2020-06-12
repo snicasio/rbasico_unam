@@ -59,6 +59,49 @@ ejercicio = FAO_df[FAO_df$Element == "Net per capita Production Index Number (20
 ejercicio
 str(ejercicio)
 
+names(FAO_df) # Consultar las columnas
+
+## Hacer un subset con la información de México
+subset_1 = subset(FAO_df, subset = Area == "Mexico", select = c("Area", "Item", "Value"))
+subset_1 
+
+subset_2 = FAO_df[FAO_df$Area == "Mexico", c(4,8,12)]
+subset_2
+
+subset_3 = subset(FAO_df, 
+                  subset = 
+                      (Area == "Belize" |
+                      Area == "Panama") &
+                      Element == "Net per capita Production Index Number (2004-2006 = 100)" &
+                      Item == "Livestock (PIN)" &
+                      Year >=2000 &
+                      Year <= 2005,
+                  select = c("Area", "Item", "Value"))
+subset_3
+
+## EJERCICIO: Calcular el valor promedio (cada 5 anios)
+## de la producción neta por agricultura para Mexico y Colombia
+#Paso 1: Seleccionar: Mexico y Colombia
+#Paso 2: Seleccionar: [1] "Agriculture (PIN)"
+#Paso 3: Seleccionar: [3] "Net Production Index Number (2004-2006 = 100)"
+#Paso 4: Seleccionar: Value
+#PaSO 5: Calcular el promedio
+
+agri_mc = subset(FAO_df,
+                 subset = (Area == "Mexico" | Area == "Colombia") & #Paso 1
+                     Item == "Agriculture (PIN)" & #Paso 2
+                     Element == "Net Production Index Number (2004-2006 = 100)" & #Paso 3
+                     Year >= 2000 & Year <=2005, #Paso 4
+                 select = c("Area", "Value")) #Paso 5
+agri_mc
+
+write.csv(agri_mc,"agri_2005.csv", row.names = F)
+
+aggregate(agri_mc$Value, by = list(agri_mc$Area), FUN = mean) #Paso 6
+
+
+
+
 FAO_df$Area
 levels(FAO_df$Area) #Mostrar Áreas únicas (de un factor)
 typeof(FAO_df$Area)
