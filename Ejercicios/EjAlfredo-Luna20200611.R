@@ -50,13 +50,33 @@ sum(Subset_3$Value)
 #Paso 6 Calcular promedio
 
 
-Agr<-subset(FAO_df,subset=(Area=="Mexico"|Area=="Colombia")& #Paso 1
+Agr2005<-subset(FAO_df,subset=(Area=="Mexico"|Area=="Colombia")& #Paso 1
                    Element=="Net Production Index Number (2004-2006 = 100)"& #Paso 3
                    Item=="Agriculture (PIN)"& #Paso 2
-                   Year>=2000 &Year<2006, #Paso 4
+                   Year<=2005, #Paso 4
                  select=c("Area","Value")) #Paso 5
+Agr2005
+sum(Agr2005$Value)
 
-Agr
-sum(Agr$Value)
+Agr2010<-subset(FAO_df,subset=(Area=="Mexico"|Area=="Colombia")& #Paso 1
+                  Element=="Net Production Index Number (2004-2006 = 100)"& #Paso 3
+                  Item=="Agriculture (PIN)"& #Paso 2
+                  Year>=2006&Year<=2010, #Paso 4
+                select=c("Area","Value")) #Paso 5
+Agr2010
+sum(Agr2010$Value)
+
+Agr2015<-subset(FAO_df,subset=(Area=="Mexico"|Area=="Colombia")& #Paso 1
+                  Element=="Net Production Index Number (2004-2006 = 100)"& #Paso 3
+                  Item=="Agriculture (PIN)"& #Paso 2
+                  Year>=2011&Year<=2015, #Paso 4
+                select=c("Area","Value")) #Paso 5
+Agr2015
+sum(Agr2015$Value)
+
+aggregate(Agr2005$Value,by=list(Agr2005$Area),FUN=mean) #Paso 6 
+aggregate(Agr2010$Value,by=list(Agr2010$Area),FUN=mean) #Paso 6 
+aggregate(Agr2015$Value,by=list(Agr2015$Area),FUN=mean) #Paso 6 
+
 write.csv(Agr,"ALB_Agr_2005.csv",row.names=F)
-aggregate(Agr$Value,by=list(Agr$Area),FUN=mean) #Paso 6 
+
