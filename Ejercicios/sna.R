@@ -288,6 +288,16 @@ agri_mx <- subset(FAO_df,
                       Element == "Net Production Index Number (2004-2006 = 100)",
                   select = "Value")
 
+
+
+subset(FAO_df,
+       subset = Area == "Mexico" & # Paso 1
+           Item == "Agriculture (PIN)" & # Paso 2
+           Element == "Net Production Index Number (2004-2006 = 100)", # Paso 4
+       select = "Value")
+
+
+
 str(agri_mx)
 mean(agri_mx$Value)
 mean(agri_mx)
